@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongo-deployment
+  name: webapp-deployment
   labels:
     app: webapp
 spec:
@@ -45,7 +45,7 @@ spec:
   selector:
     app: webapp
   ports:
-    - port: 3000
-      protocol: TCP
+    - protocol: TCP
+      port: 3000
       targetPort: 3000
       nodePort: 30100
